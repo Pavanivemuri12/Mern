@@ -1,0 +1,25 @@
+/*element selector*/
+p{
+    color:blue;
+}
+/*universal selector*/
+*{
+    background-color: burlywood;
+}
+/* class selector-best practice*/
+.myclass{
+background-color: aquamarine;
+
+}
+
+/* id selector*/
+#myclass{
+    background-color: blueviolet;
+    color:white;
+
+}
+
+::placeholder{
+    color:black;
+}
+

@@ -1,0 +1,17 @@
+body{
+    margin: 0 px;
+    padding: 0 px;
+    background-color:chartreuse;
+    height : 10 vh;
+    width : 10 vw;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.auth-form{
+    height :40 vh;
+    width : 20 vw;
+    background-color: cornflowerblue;
+    border: 5px solid crimson;
+
+}
