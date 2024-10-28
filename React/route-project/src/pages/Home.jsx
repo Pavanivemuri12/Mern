@@ -37,11 +37,9 @@ const Home = () => {
 
         {/* New Box positioned to the right of the "Men" and "Kids" section */}
         <div
-          className="absolute top-28 left-[600px] w-[600px] h-[350px] bg-white shadow-[0px_0px_15px_rgba(0,0,0,0.09)] p-9 space-y-3 overflow-hidden"
+          className="absolute top-[20px] left-[300px] w-[400px] h-[350px] bg-white shadow-[0px_0px_15px_rgba(0,0,0,0.09)] p-9 space-y-3 overflow-hidden"
         >
-          <div className="w-24 h-24 bg-purple-500 rounded-full absolute -right-5 -top-7">
-            <p className="absolute bottom-6 left-7 text-white text-2xl"></p>
-          </div>
+          
           <div className="fill-violet-500 w-12">
           <img 
             src="https://cdn2.vectorstock.com/i/1000x1000/53/01/happy-diwali-sale-background-with-mandala-vector-17775301.jpg"
@@ -57,7 +55,59 @@ const Home = () => {
            Free Delivery       Cash on delivery       Easy Returns
           </p>
           </div>
+
+
+          
+
+          
         </div>
+
+
+        <div
+          className="absolute top-[20px] left-[710px] w-[400px] h-[350px] bg-white shadow-[0px_0px_15px_rgba(0,0,0,0.09)] p-9 space-y-3 overflow-hidden"
+        >
+          
+          <div className="fill-violet-500 w-12">
+          <img 
+            src="https://cdn2.vectorstock.com/i/1000x1000/53/01/happy-diwali-sale-background-with-mandala-vector-17775301.jpg"
+            alt="Placeholder"
+            className=" max-w-none w-80 h-48 object-cover rounded-lg"
+          />
+              
+            
+          </div>
+          <div className="whitespace-pre-wrap">
+          <h1 className="font-bold text-xl">Lowest Prices Best Quality Shopping</h1>
+          <p className="text-sm text-zinc-600 leading-6">
+           Free Delivery       Cash on delivery       Easy Returns
+          </p>
+          </div>
+             
+        </div>
+
+        <div
+          className="absolute top-[20px] left-[1120px] w-[400px] h-[350px] bg-white shadow-[0px_0px_15px_rgba(0,0,0,0.09)] p-9 space-y-3 overflow-hidden"
+        >
+          
+          <div className="fill-violet-500 w-12">
+          <img 
+            src="https://cdn2.vectorstock.com/i/1000x1000/53/01/happy-diwali-sale-background-with-mandala-vector-17775301.jpg"
+            alt="Placeholder"
+            className=" max-w-none w-80 h-48 object-cover rounded-lg"
+          />
+              
+            
+          </div>
+          <div className="whitespace-pre-wrap">
+          <h1 className="font-bold text-xl">Lowest Prices Best Quality Shopping</h1>
+          <p className="text-sm text-zinc-600 leading-6">
+           Free Delivery       Cash on delivery       Easy Returns
+          </p>
+          </div>
+             
+        </div>
+
+
       </div>
     </>
   );
