@@ -20,9 +20,9 @@ const Navbar = () => {
       <div className="w-screen h-14 shadow-purple-500 shadow-md flex flex-row justify-center items-center">
         <div className="w-[40%] flex justify-start items-center font-bold text-2xl text-purple-500">
         <img 
-            src="https://cdn2.vectorstock.com/i/1000x1000/53/01/happy-diwali-sale-background-with-mandala-vector-17775301.jpg"
+            src="https://static.vecteezy.com/system/resources/thumbnails/003/375/729/small/max-grunge-brush-stroke-word-text-for-typography-icon-logo-design-vector.jpg"
             alt="Placeholder"
-            className="absolute left-9  max-w-none w-[30px] h-[30px] object-cover rounded-lg"
+            className="absolute left-[7rem]  max-w-none w-[30px] h-[30px] object-cover rounded-lg"
           />
           Max Store
         </div>
