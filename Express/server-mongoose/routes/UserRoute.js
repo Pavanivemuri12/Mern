@@ -14,8 +14,8 @@ router.get('/all',async(req,res)=>{
 router.post("/add",async(req,res)=>{
     try{
         const UserData = new Users(req.body);
-        const{name,email,password,phoneNumber,address} = UserData;
-        if(!name || !email || !password || !phoneNumber || !address){
+        const{name,email,phone,password} = UserData;
+        if(!name || !email ||!phone || !password ){
             res.status(401).json({message: "All fields required"});
         }
              const storedata = await UserData.save();

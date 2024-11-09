@@ -12,20 +12,17 @@ const UsersSchema = new mongoose.Schema({
         required : true,
         unique :true
     },
-    password:{
-        type:String,
-        required : true
-    },
-    phoneNumber:{
+    phone:{
         type:Number,
         required : true,
        unique:true
     },
-    address:{
+    password:{
         type:String,
-        required:false
-    }
-        
+        required : true
+    },
+
+
 
         
     }
