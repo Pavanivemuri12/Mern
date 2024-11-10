@@ -8,6 +8,7 @@ import AdminDashboard from './pages/Admin/AdminDashboard'
 import AdminProducts from './pages/Admin/AdminProducts'
 import AdminUsers from './pages/Admin/AdminUsers'
 import AdminSettings from './pages/Admin/AdminSettings'
+import AdminOrders from './pages/Admin/AdminOrders'
 // import {} from 'react'
 const App = () => {
     return (
@@ -24,6 +25,7 @@ const App = () => {
                         <Route path='/admin/products' element={<AdminProducts/>} />
                         <Route path='/admin/users' element={<AdminUsers/>} />
                         <Route path='/admin/settings' element={<AdminSettings/>} />
+                        <Route path='/admin/orders' element={<AdminOrders/>} />
                     </Route>
                 </Routes>
             </BrowserRouter>

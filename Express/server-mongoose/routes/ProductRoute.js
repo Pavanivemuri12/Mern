@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Products = require("../models/ProductsModel");
+const validate = require('../config/auth')
 
 //Method : GET | API URL: localhost:3000/products/all
 router.get("/all", async (req, res) => {
@@ -12,7 +13,7 @@ router.get("/all", async (req, res) => {
   }
 });
 //Method : POST | API localhost:3000/products/add
-router.post("/add", async (req, res) => {
+router.post("/add",validate, async (req, res) => {
   try {
     const ProductData = new Products(req.body);
     const { name, img, price } = ProductData;
@@ -25,9 +26,9 @@ router.post("/add", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-router.put('/edit/:id',async(req,res)=>{
+router.put('/edit/:id',validate,async(req,res)=>{
     try{
-        const id = req.params.id
+        const id = req.params._id
         const existingproduct = await Products.findOne({_id:id})
         if(!existingproduct){
             res.status(404).json({message:error.message})
@@ -39,7 +40,7 @@ router.put('/edit/:id',async(req,res)=>{
     }
 })
 
-router.delete('/delete/:id', async(req,res)=>{
+router.delete('/delete/:id',validate, async(req,res)=>{
     try{
         const id = req.params.id
         const existingproduct = await Products.findOne({_id:id})
