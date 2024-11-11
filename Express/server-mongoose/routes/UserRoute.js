@@ -12,18 +12,41 @@ router.get('/all',async(req,res)=>{
     }
 })
 router.post("/add",async(req,res)=>{
-    try{
-        const UserData = new Users(req.body);
-        const{name,email,phone,password} = UserData;
-        if(!name || !email ||!phone || !password ){
-            res.status(401).json({message: "All fields required"});
+    try {
+        // const newuser = new Users(req.body)
+        const { name, email, phone, password, role } = req.body
+        if (!name || !email || !phone || !password || !role) {
+            return res.status(401).json({ message: "All fields required" })
         }
-             const storedata = await UserData.save();
-             res.status(200).json(storedata);
-    } catch(error){
-        res.status(500).json({ message: error.message });
+
+        //TODO : Add User Email & Phone Validation
+
+        //Email
+        const exisitingemail = await Users.findOne({ email })
+        if (exisitingemail) {
+            return res.status(500).json({ message: `User with ${email} already exists !` })
+        }
+
+        //Phone
+        const exisitingphone = await Users.findOne({ phone })
+        if (exisitingphone) {
+            return res.status(500).json({ message: `User with ${phone} already exists !` })
+        }
+        const salt = await bcrypt.genSalt(10)
+        const hashedpassword = await bcrypt.hash(password, salt)
+        const newuser = new Users({
+            name,
+            email,
+            phone,
+            role,
+            password: hashedpassword
+        })
+        await newuser.save()
+        return res.status(200).json(newuser)
+    } catch (error) {
+        return res.status(500).json({ message: error.message })
     }
-});
+})
 router.put('/edit/:id',async(req,res)=>{
     try{
         const id = req.params.id

@@ -3,7 +3,7 @@ const router = express.Router();
 const Order = require('../models/OrderSchema');
 const validate = require('../config/auth')
 //Method : GET | API URL: localhost:3000/order/all
-router.get('/all',validate,async(req,res)=>{
+router.get('/all',async(req,res)=>{
     try{
         const order = await Order.find();
         res.status(200).json(order);
