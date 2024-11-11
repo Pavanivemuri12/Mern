@@ -27,7 +27,7 @@ const App = () => {
                         <Route path='/admin/settings' element={<AdminSettings/>} />
                         <Route path='/admin/orders' element={<AdminOrders/>} />
                     </Route>
-                </Routes>
+                </Routes> 
             </BrowserRouter>
         </>
     )
