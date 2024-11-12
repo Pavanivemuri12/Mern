@@ -13,7 +13,7 @@ router.get("/all", async (req, res) => {
   }
 });
 //Method : POST | API localhost:3000/products/add
-router.post("/add",validate, async (req, res) => {
+router.post("/add", async (req, res) => {
   try {
     const ProductData = new Products(req.body);
     const { name, img, price } = ProductData;
@@ -26,7 +26,7 @@ router.post("/add",validate, async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-router.put('/edit/:id',validate,async(req,res)=>{
+router.put('/edit/:id',async(req,res)=>{
     try{
         const id = req.params._id
         const existingproduct = await Products.findOne({_id:id})
@@ -40,7 +40,7 @@ router.put('/edit/:id',validate,async(req,res)=>{
     }
 })
 
-router.delete('/delete/:id',validate, async(req,res)=>{
+router.delete('/delete/:id', async(req,res)=>{
     try{
         const id = req.params.id
         const existingproduct = await Products.findOne({_id:id})

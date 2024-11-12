@@ -5,6 +5,7 @@ import {getUsers} from '../../api/api'
 const AdminUsers = () => {
   const[users,setUsers] = useState(null)
 const [loading, setLoading] = useState(true)
+
 async function fetchData(){
   try {
     const res = await getUsers()
