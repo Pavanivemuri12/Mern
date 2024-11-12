@@ -5,7 +5,7 @@ import AdminTopBar from "../components/Admin/AdminTopBar"
 const AdminLayout = () => {
     return (
         <>
-            <div className="w-screen h-full flex flex-row justify-center items-center">
+            <div className="w-screen h-screen flex flex-row justify-center items-center">
                 <div className="w-[18vw] h-screen left-0 top-0">
                     <AdminLeftBar />
                 </div>
