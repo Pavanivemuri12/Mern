@@ -2,6 +2,16 @@ const express = require('express');
 const router = express.Router();
 const Order = require('../models/OrderSchema');
 const validate = require('../config/auth')
+
+router.get('/count',async (req,res)=>{
+    try {
+      const count = await Order.countDocuments()
+      return res.status(200).json({count:count})
+    } catch (error) {
+      res.status(500).json({ message: error.message });
+  
+    }
+  })
 //Method : GET | API URL: localhost:3000/order/all
 router.get('/all',async(req,res)=>{
     try{
